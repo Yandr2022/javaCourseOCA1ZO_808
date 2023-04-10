@@ -21,6 +21,12 @@ public class BankAccount {
         myAccount.id = 1;
         myAccount.name = "Yulia";
         myAccount.balance = 1500.25;
+        yourAccount.id = 2;
+        yourAccount.name = "Ivan";
+        yourAccount.balance = 8700;
+        hisAccount.id = 3;
+        hisAccount.name = "John";
+        hisAccount.balance = 1850.78;
         System.out.println(myAccount + "\n" + yourAccount + "\n" + hisAccount);
     }
 
