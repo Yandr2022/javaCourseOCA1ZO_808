@@ -9,7 +9,7 @@ public class Student {
     double economicsAverageGrade;
     double foreignLanguageAverageGrade;
 
-    public Student(int id, String firstName, String lastName, int yearOfStudy,
+    Student(int id, String firstName, String lastName, int yearOfStudy,
                    double mathAverageGrade, double economicsAverageGrade, double foreignLanguageAverageGrade) {
         this.id = id;
         this.firstName = firstName;
@@ -20,6 +20,15 @@ public class Student {
         this.foreignLanguageAverageGrade = foreignLanguageAverageGrade;
     }
 
-    public Student() {
+    double getAvg() {
+        return (mathAverageGrade + economicsAverageGrade + foreignLanguageAverageGrade) / 3;
+    }
+
+    void showGrades() {
+        System.out.printf("Math: %.2f;\nEconomics: %.2f;\nForeignLanguage: %.2f;\nAverage: %.2f"
+                , mathAverageGrade, economicsAverageGrade, foreignLanguageAverageGrade, getAvg());
+    }
+
+    Student() {
     }
 }

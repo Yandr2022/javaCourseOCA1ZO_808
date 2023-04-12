@@ -55,15 +55,23 @@ class BankAccount{
 
     double balance;
 
-    public BankAccount() {
+     BankAccount() {
         id = idCount++;
         balance = 1000;
 
     }
 
-    public BankAccount(int id,  double balance) {
+     BankAccount(int id,  double balance) {
         this.id = id;
         this.balance = balance;
+    }
+
+    void increaseBalance(double amount){
+         balance+=amount;
+    }
+
+    void reduceBalance(double amount){
+         balance-=amount;
     }
 
     @Override
@@ -77,10 +85,15 @@ class BankAccount{
 
 class Demo {
     public static void main(String[] args) {
-        System.out.println(new Human());
+        Human human = new Human();
+        System.out.println(human);
+        human.bankAccount.reduceBalance(152.2);
+        System.out.println(human);
         HumanCar car = new HumanCar("blue","V8");
         BankAccount account = new BankAccount();
-        Human human = new Human("Yuli",car,account);
-        System.out.println(human);
+        Human human1 = new Human("Yuli",car,account);
+        System.out.println(human1);
+        human1.bankAccount.increaseBalance(200);
+        System.out.println(human1);
     }
 }

@@ -18,6 +18,16 @@ public class Demo {
                     , getAvg(st.economicsAverageGrade, st.foreignLanguageAverageGrade, st.mathAverageGrade));
         }
 
+        Student student = new Student(4,"Test","TEst",4,8.2,6.8,9);
+        System.out.println(student.firstName + " " + student.lastName + ":");
+        student.showGrades();
+        System.out.println();
+        System.out.println();
+
+        for (Student st : students) {
+            System.out.println( st.firstName+ " " + st.lastName + ", average grade:" + new Demo().getStudentAvg(st));
+        }
+
     }
 
     public static double getAvg(double... nums) {
@@ -27,5 +37,14 @@ public class Demo {
             sum += num;
         }
         return sum / nums.length;
+    }
+     double getStudentAvg(Student student) {
+        double sum = 0;
+        double []grades = {student.economicsAverageGrade,student.mathAverageGrade,student.foreignLanguageAverageGrade};
+        for (double grade : grades
+        ) {
+            sum += grade;
+        }
+        return sum / grades.length;
     }
 }
