@@ -1,0 +1,86 @@
+package lesson5;
+
+public class Human {
+
+    String name;
+    HumanCar car;
+    BankAccount bankAccount;
+
+    public Human() {
+        name = "John Dow";
+        bankAccount = new BankAccount();
+        car = new HumanCar();
+    }
+
+    public Human(String name, HumanCar car, BankAccount bankAccount) {
+        this.name = name;
+        this.car = car;
+        this.bankAccount = bankAccount;
+    }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", " + car +
+                ", " + bankAccount +
+                '}';
+    }
+}
+class HumanCar{
+    String color;
+    String engine;
+
+    public HumanCar() {
+        color = "red";
+        engine = "V6";
+    }
+
+    public HumanCar(String color, String engine) {
+        this.color = color;
+        this.engine = engine;
+    }
+
+    @Override
+    public String toString() {
+        return "HumanCar{" +
+                "color='" + color + '\'' +
+                ", engine='" + engine + '\'' +
+                '}';
+    }
+}
+class BankAccount{
+    private static int idCount = 0;
+    int id ;
+
+    double balance;
+
+    public BankAccount() {
+        id = idCount++;
+        balance = 1000;
+
+    }
+
+    public BankAccount(int id,  double balance) {
+        this.id = id;
+        this.balance = balance;
+    }
+
+    @Override
+    public String toString() {
+        return "BankAccount{" +
+                "id=" + id +
+                ", balance=" + balance +
+                '}';
+    }
+}
+
+class Demo {
+    public static void main(String[] args) {
+        System.out.println(new Human());
+        HumanCar car = new HumanCar("blue","V8");
+        BankAccount account = new BankAccount();
+        Human human = new Human("Yuli",car,account);
+        System.out.println(human);
+    }
+}
