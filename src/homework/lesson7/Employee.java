@@ -13,11 +13,12 @@ public class Employee {
     public Employee() {
     }
 
+
     Employee(int id, String surname, int age) {
         this(id, surname, age, 0.0, null);
     }
 
-    Employee(String surname, int age) {
+     Employee(String surname, int age) {
         this(0, surname, age, 0.0, null);
 
     }
@@ -28,6 +29,18 @@ public class Employee {
         this.age = age;
         this.salary = salary;
         this.department = department;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public double getSalary() {
+        return salary;
     }
 
     @Override
