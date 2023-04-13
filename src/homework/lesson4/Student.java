@@ -8,6 +8,11 @@ public class Student {
     double mathAverageGrade;
     double economicsAverageGrade;
     double foreignLanguageAverageGrade;
+    Student() {
+    }
+    Student(int id, String firstName, String lastName, int yearOfStudy) {
+        this(id, firstName,lastName,yearOfStudy,0.0,0.0,0.0);
+    }
 
     Student(int id, String firstName, String lastName, int yearOfStudy,
                    double mathAverageGrade, double economicsAverageGrade, double foreignLanguageAverageGrade) {
@@ -29,6 +34,16 @@ public class Student {
                 , mathAverageGrade, economicsAverageGrade, foreignLanguageAverageGrade, getAvg());
     }
 
-    Student() {
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", yearOfStudy=" + yearOfStudy +
+                ", mathAverageGrade=" + mathAverageGrade +
+                ", economicsAverageGrade=" + economicsAverageGrade +
+                ", foreignLanguageAverageGrade=" + foreignLanguageAverageGrade +
+                '}';
     }
 }

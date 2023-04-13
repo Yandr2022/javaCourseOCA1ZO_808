@@ -18,14 +18,25 @@ public class Demo {
                     , getAvg(st.economicsAverageGrade, st.foreignLanguageAverageGrade, st.mathAverageGrade));
         }
 
-        Student student = new Student(4,"Test","TEst",4,8.2,6.8,9);
+        Student student = new Student(4, "Test", "TEst", 4, 8.2, 6.8, 9);
         System.out.println(student.firstName + " " + student.lastName + ":");
         student.showGrades();
         System.out.println();
         System.out.println();
 
         for (Student st : students) {
-            System.out.println( st.firstName+ " " + st.lastName + ", average grade:" + new Demo().getStudentAvg(st));
+            System.out.println(st.firstName + " " + st.lastName + ", average grade:" + new Demo().getStudentAvg(st));
+        }
+        System.out.println();
+        System.out.println();
+
+        Student student4 = new Student();
+        Student student5 = new Student(2, "Liz", "Smith", 3);
+        Student student6 = new Student(3, "Mike", "Wilson"
+                , 1, 9, 8.7, 10);
+        Student[] students2 = {student4, student5, student6};
+        for (Student st : students2) {
+            System.out.println(st);
         }
 
     }

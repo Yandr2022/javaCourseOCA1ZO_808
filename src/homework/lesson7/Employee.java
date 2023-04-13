@@ -1,13 +1,13 @@
-package lesson6;
+package homework.lesson7;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Employee {
     int id;
-    String surname;
+    public String surname;
     int age;
-    double salary;
+    private double salary;
     String department;
 
     public Employee() {
