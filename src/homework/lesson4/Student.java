@@ -8,7 +8,7 @@ public class Student {
     double mathAverageGrade;
     double economicsAverageGrade;
     double foreignLanguageAverageGrade;
-    Student() {
+    public Student() {
     }
     Student(int id, String firstName, String lastName, int yearOfStudy) {
         this(id, firstName,lastName,yearOfStudy,0.0,0.0,0.0);

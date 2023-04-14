@@ -1,6 +1,10 @@
 package lesson9;
 
 public class Student {
+    public static int num;
+    public static void showNum(){
+        System.out.println(num);
+    }
 }
 
 class StudentDemo {
