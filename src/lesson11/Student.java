@@ -11,6 +11,18 @@ public class Student {
         this.grade = grade;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getCourse() {
+        return course;
+    }
+
+    public double getGrade() {
+        return grade;
+    }
+
     public static void swapFake(Student student, Student student1){
         Student st3 = student;
         student = student1;

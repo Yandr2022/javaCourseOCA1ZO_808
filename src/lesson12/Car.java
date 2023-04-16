@@ -1,4 +1,4 @@
-package homework.lesson12;
+package lesson12;
 
 public class Car {
     int engine;
