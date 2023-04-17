@@ -26,7 +26,7 @@ public class Demo {
             int number = scanner.nextInt();
             int num = random.nextInt(21);
             boolean result = num == number;
-            System.out.println("number on the roulette wheel: " + num + (result ? "You won, congrats!!" : "You lose"));
+            System.out.println("number on the roulette wheel: " + num + (result ? " You won, congrats!!" : " You lose"));
             money = result ? money + bet : money - bet;
         }
     }
