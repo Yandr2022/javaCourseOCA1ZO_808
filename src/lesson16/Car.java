@@ -1,12 +1,20 @@
 package lesson16;
 
 public class Car {
-    String color;
+     String color;
     String engine;
     final static  int a = 5;
 
     public Car(String color, String engine) {
         this.color = color;
+        this.engine = engine;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setEngine(String engine) {
         this.engine = engine;
     }
 
