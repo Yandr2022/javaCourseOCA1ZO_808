@@ -1,20 +1,19 @@
 package lesson22.inheritance;
 
-public class Driver extends Employee{
+public class Driver extends Employee {
     private String carName;
 
-    public void eat() {
-        System.out.println("eat");
+    public Driver() {
     }
 
-    public void sleep() {
-        System.out.println("sleep");
+    public Driver(String name, int age, int exp, String carName) {
+        super(name, age, exp);
+        this.carName = carName;
     }
 
     public void drive() {
         System.out.println("drive");
     }
-
 
     public String getCarName() {
         return carName;
@@ -26,8 +25,8 @@ public class Driver extends Employee{
 
     @Override
     public String toString() {
-        return "Driver{" +
-                "carName='" + carName + '\'' +
-                "} " + super.toString();
+        return "Driver{" + super.toString() +
+                " ,carName='" + carName + '\'' +
+                "} ";
     }
 }

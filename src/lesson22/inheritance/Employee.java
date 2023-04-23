@@ -5,6 +5,15 @@ public class Employee {
     private int age;
     private int exp;
 
+    public Employee() {
+    }
+
+    public Employee(String name, int age, int exp) {
+        this.name = name;
+        this.age = age;
+        this.exp = exp;
+    }
+
     public void eat() {
         System.out.println("eat");
     }
@@ -35,5 +44,12 @@ public class Employee {
 
     public void setExp(int exp) {
         this.exp = exp;
+    }
+
+    @Override
+    public String toString() {
+        return "name='" + name + '\'' +
+                ", age=" + age +
+                ", exp=" + exp;
     }
 }
