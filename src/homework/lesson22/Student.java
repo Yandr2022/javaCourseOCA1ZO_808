@@ -15,7 +15,8 @@ public class Student {
     }
 
     public StringBuilder getName() {
-        return name;
+
+        return new StringBuilder(name);
     }
 
     public void setName(StringBuilder name) {
