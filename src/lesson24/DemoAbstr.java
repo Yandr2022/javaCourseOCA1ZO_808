@@ -1,6 +1,6 @@
 package lesson24;
 
-public class Demo {
+public class DemoAbstr {
     public static void main(String[] args) {
         Shape[] shapes = {new Square(8), new Rectangle(3, 5), new Circle(7)};
         for (Shape s : shapes) {
@@ -11,6 +11,10 @@ public class Demo {
 
 abstract class Shape {
     private int sidesNum;
+
+    public Shape(int sidesNum) {
+        this.sidesNum = sidesNum;
+    }
 
     abstract double getArea();
 
@@ -38,11 +42,11 @@ class Square extends Shape {
     private int side;
 
     public Square() {
-        setSidesNum(4);
+        super(4);
     }
 
     public Square(int side) {
-        setSidesNum(4);
+        super(4);
         this.side = side;
     }
 
@@ -78,11 +82,11 @@ class Rectangle extends Shape {
     private int side2;
 
     public Rectangle() {
-        setSidesNum(4);
+        super(4);;
     }
 
     public Rectangle(int side1, int side2) {
-        setSidesNum(4);
+        super(4);
         this.side1 = side1;
         this.side2 = side2;
     }
@@ -126,12 +130,13 @@ class Circle extends Shape {
     private int radius;
 
     public Circle() {
-        setSidesNum(0);
+        super(0);
     }
 
     public Circle(int radius) {
+        super(0);
         this.radius = radius;
-        setSidesNum(0);
+
     }
 
     @Override
