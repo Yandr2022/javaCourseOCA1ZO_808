@@ -13,8 +13,9 @@ public class Demo1 {
         if (c instanceof Jumpable)
             System.out.println("c is Jumpable");
     }
+
 }
 interface Jumpable{}
 class Human implements Jumpable{}
 class Man extends Human{}
-class Car{}
+class  Car{}

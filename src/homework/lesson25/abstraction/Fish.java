@@ -1,4 +1,6 @@
-package homework.lesson24.abstraction;
+package homework.lesson25.abstraction;
+
+
 
 
 public abstract class Fish extends Animal {
