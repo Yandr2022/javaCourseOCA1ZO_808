@@ -2,7 +2,7 @@ package lesson26;
 
 public class LoadingSequenceDemo {
     public static void main(String[] args) {
-Lion lion = new Lion();
+        Lion lion = new Lion();
     }
 }
 
