@@ -7,6 +7,7 @@ import homework.lesson25.abstraction.IF.Speakable;
 import homework.lesson25.abstraction.Mammal;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -31,6 +32,7 @@ public class Demo {
                 ((Fish)an).swim();
             }
         }
-
+        System.out.println(Arrays.toString(animals));
+        System.out.println(speakables);
     }
 }
