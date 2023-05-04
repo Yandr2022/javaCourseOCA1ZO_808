@@ -38,5 +38,19 @@ public class DateTimePeriodDemo {
         Period period = Period.ofWeeks(2);
         showAttendantChange(LocalDate.now(), LocalDate.now().plusMonths(2),period
                 , new String[]{"John", "Bob", "Samantha", "Liz", "Sam", "Yuli", "William"});
+        for (int i = 0; i < 20; i++) {
+            System.out.print(i!=19?"+":"+\n");
+        }
+
+        period= Period.ofMonths(1);
+        showAttendantChange(LocalDate.now(), LocalDate.now().plusMonths(3),period
+                , new String[]{"John", "Bob", "Samantha", "Liz", "Sam", "Yuli", "William"});
+        for (int i = 0; i < 20; i++) {
+            System.out.print(i!=19?"+":"+\n");
+
+            period= Period.of(0,1,10);
+            showAttendantChange(LocalDate.now(), LocalDate.now().plusMonths(3),period
+                    , new String[]{"John", "Bob", "Samantha", "Liz", "Sam", "Yuli", "William"});
+        }
     }
 }
