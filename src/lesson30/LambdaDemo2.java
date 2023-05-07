@@ -31,7 +31,7 @@ public class LambdaDemo2 {
             StudentSort.testStudents(students, sc);
             System.out.println("************************************");
         }
-
+        //Predicate
         testStudents(students, student -> student.name.length() > 4);
 
         System.out.println("************************************");
