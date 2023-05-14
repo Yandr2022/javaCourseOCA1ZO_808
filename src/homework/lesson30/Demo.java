@@ -61,7 +61,7 @@ class TestEmp {
     static void showEmpsByCondition(ArrayList<Employee> employees, Predicate<Employee> condition) {
         for (Employee employee : employees) {
             if (condition.test(employee)) {
-                System.out.println(employee);
+                showEmp(employee);
             }
         }
     }
